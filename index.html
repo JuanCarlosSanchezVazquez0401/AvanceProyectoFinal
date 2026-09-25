@@ -3,92 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+CU+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/bootstrap-utilities.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Koyotl</title>
+    <title>Document</title>
   </head>
   <body>
- <header>
-        <!-- 1. BARRA SUPERIOR (Negra) -->
-        <div class="top-bar text-white py-3">
-            <div class="container-fluid px-5 d-flex justify-content-between align-items-center">
-                <div>
-                    PERSONALIZA TU ESTILO, PERSONALIZA TU VIDA
-                </div>
-                <div class="d-flex align-items-center">
-                    <a href="#" class="text-white text-decoration-none d-flex align-items-center gap-2">
-                        CART <i class="bi bi-cart3 fs-5"></i>
-                    </a>
-                    <div class="top-bar-divider"></div>
-                    <a href="#" class="text-white text-decoration-none d-flex align-items-center gap-2">
-                        SIGN IN <i class="bi bi-box-arrow-in-right fs-5"></i>
-                    </a>
-                </div>
-            </div>
+    <header class="header-koyotl position-relative">
+      <!-- ==========================================
+       1. TOP BAR (Barra Negra Superior)
+       ========================================== -->
+      <div class="top-bar bg-black text-white py-3 px-4">
+        <div
+          class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 barra-content"
+        >
+          <!-- Lado Izquierdo: Logo Koyotl + Slogan -->
+          <div
+            class="contenedor-headerL d-flex flex-column align-items-center align-items-md-start"
+          >
+            <img
+              class="koyotlHeader"
+              src="img/home/KoyotlLogo.png"
+              alt="Koyotl Logo"
+            />
+            <p class="slogan mb-0">
+              Personaliza tu estilo, Personaliza tu vida
+            </p>
+          </div>
+
+          <!-- Lado Derecho: Cart & Sign In -->
+          <div class="contenedor-headerR d-flex align-items-center gap-3">
+            <a href="#" class="enlace-top">
+              CART <span class="fa-solid fa-cart-shopping icon"></span>
+            </a>
+            <span class="separadorEnlace">|</span>
+            <a href="#" class="enlace-top">
+              SIGN IN
+              <span class="fa-solid fa-arrow-right-to-bracket icon"></span>
+            </a>
+          </div>
         </div>
+      </div>
 
-        <!-- 2. MENÚ PRINCIPAL (Con Logo Centrado) -->
-        <nav class="navbar navbar-expand-lg main-nav pt-4 pb-5 position-relative">
-            <div class="container-fluid px-5">
-                <!-- Logo -->
-                <a class="navbar-brand logo-center" href="#">
-                    <!-- Reemplaza el src con el logo de Honda dorado -->
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Honda_Logo.svg" alt="Honda Logo" width="90">
-                </a>
+      <!-- ==========================================
+       2. NAV FLOTANTE CON GRADIENTE
+       ========================================== -->
+      <nav class="nav-koyotl w-100">
+        <div class="container-fluid contenedor-nav px-4 px-lg-5">
+          <!-- Enlaces Izquierda -->
+          <div class="navL">
+            <a href="#" class="enlaces-nav">HOME</a>
+            <a href="#" class="enlaces-nav">
+              SHOWROOM <span class="fa-solid fa-angle-down icon-arrow"></span>
+            </a>
+          </div>
 
-                <div class="collapse navbar-collapse w-100">
-                    <ul class="navbar-nav w-100 d-flex justify-content-between">
-                        <!-- Mitad Izquierda -->
-                        <div class="d-flex w-50 justify-content-center gap-5 pe-5">
-                            <li class="nav-item">
-                                <a class="nav-link active-gold" href="#">HOME</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                                    SHOWROOM
-                                </a>
-                            </li>
-                        </div>
-                        
-                        <!-- Mitad Derecha -->
-                        <div class="d-flex w-50 justify-content-center gap-5 ps-5">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">CONTACT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">ABOUT</a>
-                            </li>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+          <!-- Logo Central (Corta hacia arriba) -->
+          <div class="contenedor-logo-center">
+            <img
+              class="logo"
+              src="img/home/KoyotlCut.png"
+              alt="Koyotl Emblem"
+            />
+          </div>
+
+          <!-- Enlaces Derecha -->
+          <div class="navR">
+            <a href="#" class="enlaces-nav">CONTACT</a>
+            <a href="#" class="enlaces-nav">ABOUT</a>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <!-- Espaciador para empujar el menú inferior hacia abajo -->
-    <main class="flex-grow-1"></main>
+    <main>
+      <!-- ==========================================
+       BANNER PRINCIPAL CON CAPA COMPARTIDA (GRID)
+       ========================================== -->
+      <div class="contenedor-main">
+        <!-- Capa 1 (Fondo): Imagen del auto -->
+        <img
+          class="Banner"
+          src="img/home/hOME_sintexto.png"
+          alt="Honda Civic Gris Koyotl"
+        />
 
-    <!-- 3. MENÚ INFERIOR (Opciones del auto) -->
-    <div class="container bottom-menu">
-        <div class="row text-center align-items-center justify-content-center">
-            <div class="col-md-4 vertical-divider py-2">
-                <a href="#" class="bottom-link">AERODINAMICA Y EXTERIOR</a>
-            </div>
-            <div class="col-md-4 vertical-divider py-2">
-                <a href="#" class="bottom-link gold-text">EQUIPAMENTO DE CABINA</a>
-            </div>
-            <div class="col-md-4 py-2">
-                <a href="#" class="bottom-link">RENDIMIENTO Y CHASIS</a>
-            </div>
+        <!-- Capa 2 (Superpuesta): Enlaces de navegación inferior -->
+        <div class="contenedor-enlacesBanner">
+          <a href="#aerodinamica" class="enlacesInferiores">
+            Aerodinámica y Exterior
+          </a>
+
+          <span class="separadorEnlaceInferior" aria-hidden="true">|</span>
+
+          <a href="#cabina" class="enlacesInferiores">
+            Equipamiento de Cabina
+          </a>
+
+          <span class="separadorEnlaceInferior" aria-hidden="true">|</span>
+
+          <a href="#rendimiento" class="enlacesInferiores">
+            Rendimiento y Chasis
+          </a>
         </div>
-    </div>
-
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+      </div>
+    </main>
   </body>
 </html>
