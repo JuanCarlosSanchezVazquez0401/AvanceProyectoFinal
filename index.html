@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Document</title>
+    <title>Home | Koyotl</title>
   </head>
   <body>
     <header class="header-koyotl position-relative">
@@ -63,7 +63,7 @@
           <!-- Enlaces Izquierda -->
           <div class="navL">
             <a href="#" class="enlaces-nav">HOME</a>
-            <a href="#" class="enlaces-nav">
+            <a href="showroom.html" class="enlaces-nav">
               SHOWROOM <span class="fa-solid fa-angle-down icon-arrow"></span>
             </a>
           </div>
@@ -100,23 +100,121 @@
 
         <!-- Capa 2 (Superpuesta): Enlaces de navegación inferior -->
         <div class="contenedor-enlacesBanner">
-          <a href="#aerodinamica" class="enlacesInferiores">
+          <a href="showroom.html" class="enlacesInferiores">
             Aerodinámica y Exterior
           </a>
 
           <span class="separadorEnlaceInferior" aria-hidden="true">|</span>
 
-          <a href="#cabina" class="enlacesInferiores">
+          <a href="showroom.html" class="enlacesInferiores">
             Equipamiento de Cabina
           </a>
 
           <span class="separadorEnlaceInferior" aria-hidden="true">|</span>
 
-          <a href="#rendimiento" class="enlacesInferiores">
+          <a href="showroom.html" class="enlacesInferiores">
             Rendimiento y Chasis
           </a>
         </div>
       </div>
     </main>
+
+    <section class="contenedor-seccion py-5">
+      <div class="container">
+        <!-- ------------------------------------------
+         1. BLOQUE ENCABEZADO / INTRODUCCIÓN
+         ------------------------------------------ -->
+        <div class="intro-koyotl text-center mb-5">
+          <span class="subtitulo-seccion">Línea de Performance Honda</span>
+          <h2 class="titulo-seccion">
+            Diseño Funcional. Rendimiento Sin Compromisos.
+          </h2>
+          <div class="linea-decorativa mx-auto my-3"></div>
+          <p class="descripcion-seccion">
+            En <strong>Koyotl Aero & Performance</strong> elevamos la identidad
+            de tu auto al siguiente nivel. Ofrecemos componentes de alta calidad
+            diseñados para optimizar la carga aerodinámica, mejorar la respuesta
+            en pista y personalizar la cabina con acabados premium.
+          </p>
+        </div>
+
+        <!-- ------------------------------------------
+         2. GRID DE SHOWROOM (3 CATEGORÍAS)
+         ------------------------------------------ -->
+        <div class="grid-showroom">
+          <!-- Tarjeta 1: Aerodinámica y Exterior -->
+          <article class="tarjeta-showroom">
+            <div class="contenedor-imagen">
+              <img
+                src="img/home/aerodinamica.jpg"
+                alt="Aerodinámica y Exterior Honda"
+                class="img-tarjeta"
+              />
+              <div class="overlay-tarjeta"></div>
+            </div>
+            <div class="contenido-tarjeta">
+              <span class="categoria-tag">Exterior</span>
+              <h3 class="titulo-tarjeta">Aerodinámica & Exterior</h3>
+              <p class="texto-tarjeta">
+                Lips frontales, difusores, alerones y faldones diseñados para
+                mejorar el flujo de aire y dar una postura agresiva.
+              </p>
+              <a href="showroom.html" class="boton-koyotl">
+                Explorar Catálogo
+                <i class="fa-solid fa-arrow-right icon-btn"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2: Equipamiento de Cabina -->
+          <article class="tarjeta-showroom">
+            <div class="contenedor-imagen">
+              <img
+                src="img/home/cabina.jpg"
+                alt="Equipamiento de Cabina Honda"
+                class="img-tarjeta img_cabin"
+              />
+              <div class="overlay-tarjeta"></div>
+            </div>
+            <div class="contenido-tarjeta">
+              <span class="categoria-tag">Interior</span>
+              <h3 class="titulo-tarjeta">Equipamiento de Cabina</h3>
+              <p class="texto-tarjeta">
+                Volantes deportivos, perillas de cambios pesadas, asientos tipo
+                bucket y detalles en fibra de carbono.
+              </p>
+              <a href="showroom.html" class="boton-koyotl">
+                Explorar Catálogo
+                <i class="fa-solid fa-arrow-right icon-btn"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3: Rendimiento y Chasis -->
+          <article class="tarjeta-showroom">
+            <div class="contenedor-imagen">
+              <img
+                src="img/home/rendimiento.jpg"
+                alt="Rendimiento y Chasis Honda"
+                class="img-tarjeta"
+              />
+              <div class="overlay-tarjeta"></div>
+            </div>
+            <div class="contenido-tarjeta">
+              <span class="categoria-tag">Performance</span>
+              <h3 class="titulo-tarjeta">Rendimiento & Chasis</h3>
+              <p class="texto-tarjeta">
+                Sistemas de intakes fríos, barras estabilizadoras, coilovers
+                ajustables y líneas de escape de alto flujo.
+              </p>
+              <a href="showroom.html" class="boton-koyotl">
+                Explorar Catálogo
+                <i class="fa-solid fa-arrow-right icon-btn"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

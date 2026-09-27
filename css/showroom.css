@@ -1,0 +1,406 @@
+/* ==========================================
+   ESTILOS BARRA LATERAL IZQUIERDA - SHOWROOM
+   ========================================== */
+aside.sidebar-filtros {
+  width: 280px;
+  min-width: 260px;
+  background-color: #c8c8c8; /* Fondo gris claro metálico según maqueta */
+  color: #000000;
+  padding: 3.5rem 1.2rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  /* Título principal "FILTROS" */
+  .titulo-filtros {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0;
+  }
+
+  /* Input de Búsqueda */
+  .caja-busqueda {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #a0a0a0;
+    border-radius: 4px;
+    padding: 0.35rem 0.6rem;
+    gap: 0.5rem;
+
+    .btn-buscar {
+      background: none;
+      border: none;
+      padding: 0;
+      color: #333333;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.05rem;
+
+      &:hover {
+        color: var(--color-destacado);
+      }
+    }
+
+    .input-buscar {
+      border: none;
+      outline: none;
+      background: transparent;
+      width: 100%;
+      font-size: 0.85rem;
+      color: #000000;
+
+      &::placeholder {
+        color: #777777;
+        font-style: italic;
+      }
+    }
+  }
+
+  /* Lista de Grupos */
+  .lista-grupos-filtros {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  /* Cada grupo desplegable (Accordion Header) */
+  .grupo-filtro {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .encabezado-filtro {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      text-align: left;
+
+      .icono-flecha {
+        font-size: 0.75rem;
+        transition: transform 0.3s ease;
+      }
+
+      /* &:hover {
+        color: var(--color-destacado);
+      } */
+    }
+
+    /* Sublista de opciones */
+    .opciones-filtro {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      padding-left: 0.25rem;
+
+      .item-filtro {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        cursor: pointer;
+        user-select: none;
+        transition: color 0.2s ease;
+
+        .icono-toggle {
+          font-size: 1.15rem;
+          color: #333333;
+          transition:
+            color 0.2s ease,
+            transform 0.2s ease;
+        }
+
+        .texto-opcion {
+          letter-spacing: 0.5px;
+        }
+
+        /* Hover sobre la opción */
+        &:hover {
+          color: var(--color-destacado);
+
+          .icono-toggle {
+            color: var(--color-destacado);
+          }
+        }
+
+        /* Estado Activo (Cuando el filtro está seleccionado) */
+        &.activo {
+          color: #000000;
+          font-weight: 800;
+
+          .icono-toggle {
+            color: var(
+              --color-destacado
+            ); /* Color dorado / destacado para el toggle ON */
+          }
+        }
+      }
+    }
+  }
+}
+
+.contenedor-showroom-layout {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 140px); /* Ocupa el alto restante de la pantalla */
+  background-color: #d8d8d8;
+}
+
+/* ==========================================
+   ESTILOS PANEL CENTRAL DE PRODUCTOS SHOWROOM
+   ========================================== */
+section.panel-productos {
+  flex-grow: 1;
+  background-color: #d8d8d8; /* Fondo gris neutro detrás del grid */
+  padding: 1.5rem;
+
+  /* 1. Barra de Controles Superior */
+  .top-bar-productos {
+    margin: 3rem;
+    .controles-vista {
+      display: flex;
+      gap: 0.5rem;
+
+      .btn-vista {
+        background: transparent;
+        border: none;
+        color: #444444;
+        font-size: 1.1rem;
+        cursor: pointer;
+        padding: 0.2rem 0.4rem;
+        transition: color 0.2s ease;
+
+        &:hover,
+        &.active {
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  /* 2. Grid de 3 Columnas */
+  .grid-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    /* Responsivo para tablets y pantallas pequeñas */
+    @media (max-width: 1100px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 650px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ------------------------------------------
+     3. TARJETA DE PRODUCTO STANDARD
+     ------------------------------------------ */
+  .tarjeta-producto {
+    background-color: #e5e5e5; /* Color del marco/caja según boceto */
+    border-radius: 6px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Foto del producto */
+    .contenedor-foto {
+      background-color: #ffffff;
+      border-radius: 4px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+      margin-bottom: 0.8rem;
+
+      .img-producto {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    /* Información de texto */
+    .info-producto {
+      display: flex;
+      flex-direction: column;
+
+      .nombre-producto {
+        font-size: 0.72rem;
+        font-weight: 800;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.4rem;
+        line-height: 1.25;
+      }
+
+      .precio-producto {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #000000;
+        margin-bottom: 0.8rem;
+      }
+
+      /* Grupo de Botones */
+      .acciones-producto {
+        display: flex;
+        gap: 0.5rem;
+
+        .btn-accion {
+          flex: 1;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.7rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 0.5rem 0.2rem;
+          border-radius: 2px;
+          border: none;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          text-align: center;
+        }
+
+        /* Botón IR AL ARTÍCULO */
+        .btn-secundario {
+          background-color: #bcbcbc;
+          color: #000000;
+
+          &:hover {
+            background-color: #a8a8a8;
+          }
+        }
+
+        /* Botón COMPRAR */
+        .btn-comprar {
+          background-color: #666666;
+          color: #ffffff;
+
+          &:hover {
+            background-color: #444444;
+          }
+
+          /* Estado Destacado / Seleccionado (como el botón dorado de tu foto) */
+          &.destacao {
+            background-color: var(--color-destacado-claro, #ffd757);
+            color: #000000;
+            font-weight: 800;
+
+            &:hover {
+              background-color: var(--color-destacado, #876700);
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* ------------------------------------------
+     4. TARJETA BANNER PROMOCIONAL ("TODO PARA TU HONDA")
+     ------------------------------------------ */
+  .tarjeta-promo {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    .img-promo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Capa de Texto encima del auto */
+    .overlay-promo {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+
+      .titulo-promo {
+        font-size: 3rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        line-height: 1;
+        margin: 0;
+      }
+
+      .subtitulo-promo {
+        display: block;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #ff3333; /* Rojo Honda / Type R */
+        margin-top: 0.2rem;
+      }
+
+      .badge-typer {
+        display: inline-block;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        margin-top: 0.5rem;
+
+        .r-roja {
+          color: #ff0000;
+        }
+      }
+    }
+
+    /* Anotación lateral de la maqueta */
+    .etiqueta-publicidad {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      z-index: 2;
+      font-size: 0.65rem;
+      color: rgba(255, 255, 255, 0.7);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+  }
+}

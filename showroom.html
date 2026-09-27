@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/showroom.css" />
+    <title>Showroom | koyotl</title>
+  </head>
+  <body>
+    <header class="header-koyotl position-relative">
+      <!-- ==========================================
+       1. TOP BAR (Barra Negra Superior)
+       ========================================== -->
+      <div class="top-bar bg-black text-white py-3 px-4">
+        <div
+          class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 barra-content"
+        >
+          <!-- Lado Izquierdo: Logo Koyotl + Slogan -->
+          <div
+            class="contenedor-headerL d-flex flex-column align-items-center align-items-md-start"
+          >
+            <img
+              class="koyotlHeader"
+              src="img/home/KoyotlLogo.png"
+              alt="Koyotl Logo"
+            />
+            <p class="slogan mb-0">
+              Personaliza tu estilo, Personaliza tu vida
+            </p>
+          </div>
+
+          <!-- Lado Derecho: Cart & Sign In -->
+          <div class="contenedor-headerR d-flex align-items-center gap-3">
+            <a href="#" class="enlace-top">
+              CART <span class="fa-solid fa-cart-shopping icon"></span>
+            </a>
+            <span class="separadorEnlace">|</span>
+            <a href="#" class="enlace-top">
+              SIGN IN
+              <span class="fa-solid fa-arrow-right-to-bracket icon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+       2. NAV FLOTANTE CON GRADIENTE
+       ========================================== -->
+      <nav class="nav-koyotl w-100">
+        <div class="container-fluid contenedor-nav px-4 px-lg-5">
+          <!-- Enlaces Izquierda -->
+          <div class="navL">
+            <a href="index.html" class="enlaces-nav">HOME</a>
+            <a href="#" class="enlaces-nav">
+              SHOWROOM <span class="fa-solid fa-angle-down icon-arrow"></span>
+            </a>
+          </div>
+
+          <!-- Logo Central (Corta hacia arriba) -->
+          <div class="contenedor-logo-center">
+            <img
+              class="logo"
+              src="img/home/KoyotlCut.png"
+              alt="Koyotl Emblem"
+            />
+          </div>
+
+          <!-- Enlaces Derecha -->
+          <div class="navR">
+            <a href="#" class="enlaces-nav">CONTACT</a>
+            <a href="#" class="enlaces-nav">ABOUT</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="contenedor-showroom-layout d-flex">
+      <!-- ==========================================
+     BARRA LATERAL IZQUIERDA - FILTROS
+     ========================================== -->
+      <aside class="sidebar-filtros">
+        <!-- Título de la sección -->
+        <h2 class="titulo-filtros">FILTROS</h2>
+
+        <!-- Caja de búsqueda por palabra clave -->
+        <div class="caja-busqueda">
+          <button type="button" class="btn-buscar" aria-label="Buscar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+          </button>
+          <input
+            type="text"
+            class="input-buscar"
+            placeholder="Buscar repuesto o accesorio..."
+            id="inputBuscador"
+          />
+        </div>
+
+        <!-- Contenedor de Grupos de Filtros -->
+        <div class="lista-grupos-filtros">
+          <!-- ------------------------------------------
+         GRUPO 1: MODELO
+         ------------------------------------------ -->
+          <div class="grupo-filtro" data-filter-group="modelo">
+            <button type="button" class="encabezado-filtro">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-caret-up-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                />
+              </svg>
+              <span>MODELO</span>
+            </button>
+
+            <ul class="opciones-filtro">
+              <li class="item-filtro" data-filter-value="todos">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle-on"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8"
+                  />
+                </svg>
+                <span class="texto-opcion">TODOS</span>
+              </li>
+              <li class="item-filtro" data-filter-value="fit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle2-off"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9 11c.628-.836 1-1.874 1-3a4.98 4.98 0 0 0-1-3h4a3 3 0 1 1 0 6z"
+                  />
+                  <path
+                    d="M5 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0 1A5 5 0 1 0 5 3a5 5 0 0 0 0 10"
+                  />
+                </svg>
+                <span class="texto-opcion">FIT</span>
+              </li>
+              <li class="item-filtro" data-filter-value="civic">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle2-off"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9 11c.628-.836 1-1.874 1-3a4.98 4.98 0 0 0-1-3h4a3 3 0 1 1 0 6z"
+                  />
+                  <path
+                    d="M5 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0 1A5 5 0 1 0 5 3a5 5 0 0 0 0 10"
+                  />
+                </svg>
+                <span class="texto-opcion">CIVIC</span>
+              </li>
+              <li class="item-filtro" data-filter-value="accord">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle2-off"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9 11c.628-.836 1-1.874 1-3a4.98 4.98 0 0 0-1-3h4a3 3 0 1 1 0 6z"
+                  />
+                  <path
+                    d="M5 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0 1A5 5 0 1 0 5 3a5 5 0 0 0 0 10"
+                  />
+                </svg>
+                <span class="texto-opcion">ACCORD</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ------------------------------------------
+         GRUPO 2: AERODINÁMICA Y EXTERIOR
+         ------------------------------------------ -->
+          <div class="grupo-filtro" data-filter-group="aerodinamica">
+            <button type="button" class="encabezado-filtro">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-caret-up-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                />
+              </svg>
+              <span>AERODINAMICA Y EXTERIOR</span>
+            </button>
+
+            <ul class="opciones-filtro">
+              <li class="item-filtro" data-filter-value="todos">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle-on"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8"
+                  />
+                </svg>
+                <span class="texto-opcion">TODOS</span>
+              </li>
+              <li class="item-filtro" data-filter-value="spoiler-delantero">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle2-off"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9 11c.628-.836 1-1.874 1-3a4.98 4.98 0 0 0-1-3h4a3 3 0 1 1 0 6z"
+                  />
+                  <path
+                    d="M5 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0 1A5 5 0 1 0 5 3a5 5 0 0 0 0 10"
+                  />
+                </svg>
+                <span class="texto-opcion">SPOILER DELANTERO</span>
+              </li>
+              <li class="item-filtro" data-filter-value="aero-spoiler">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle2-off"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9 11c.628-.836 1-1.874 1-3a4.98 4.98 0 0 0-1-3h4a3 3 0 1 1 0 6z"
+                  />
+                  <path
+                    d="M5 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0 1A5 5 0 1 0 5 3a5 5 0 0 0 0 10"
+                  />
+                </svg>
+                <span class="texto-opcion">AERO SPOILER</span>
+              </li>
+              <li class="item-filtro" data-filter-value="canards">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle2-off"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9 11c.628-.836 1-1.874 1-3a4.98 4.98 0 0 0-1-3h4a3 3 0 1 1 0 6z"
+                  />
+                  <path
+                    d="M5 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0 1A5 5 0 1 0 5 3a5 5 0 0 0 0 10"
+                  />
+                </svg>
+                <span class="texto-opcion">CANARDS</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ------------------------------------------
+         GRUPO 3: EQUIPAMIENTO DE CABINA
+         ------------------------------------------ -->
+          <div class="grupo-filtro" data-filter-group="cabina">
+            <button type="button" class="encabezado-filtro">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-caret-up-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                />
+              </svg>
+              <span>EQUIPAMENTO DE CABINA</span>
+            </button>
+
+            <ul class="opciones-filtro">
+              <li class="item-filtro" data-filter-value="todos">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle-on"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8"
+                  />
+                </svg>
+                <span class="texto-opcion">TODOS</span>
+              </li>
+              <li class="item-filtro" data-filter-value="tornilleria">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle2-off"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9 11c.628-.836 1-1.874 1-3a4.98 4.98 0 0 0-1-3h4a3 3 0 1 1 0 6z"
+                  />
+                  <path
+                    d="M5 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0 1A5 5 0 1 0 5 3a5 5 0 0 0 0 10"
+                  />
+                </svg>
+                <span class="texto-opcion">TORNILLERIA DE PRESICION</span>
+              </li>
+              <li class="item-filtro" data-filter-value="pedales">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle2-off"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9 11c.628-.836 1-1.874 1-3a4.98 4.98 0 0 0-1-3h4a3 3 0 1 1 0 6z"
+                  />
+                  <path
+                    d="M5 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0 1A5 5 0 1 0 5 3a5 5 0 0 0 0 10"
+                  />
+                </svg>
+                <span class="texto-opcion">PEDALES DE COMPETICION</span>
+              </li>
+              <li class="item-filtro" data-filter-value="shift-knob">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle2-off"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9 11c.628-.836 1-1.874 1-3a4.98 4.98 0 0 0-1-3h4a3 3 0 1 1 0 6z"
+                  />
+                  <path
+                    d="M5 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0 1A5 5 0 1 0 5 3a5 5 0 0 0 0 10"
+                  />
+                </svg>
+                <span class="texto-opcion">SHIFT KNOB</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ------------------------------------------
+         GRUPO 4: RENDIMIENTO Y CHASIS
+         ------------------------------------------ -->
+          <div class="grupo-filtro" data-filter-group="rendimiento">
+            <button type="button" class="encabezado-filtro">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-caret-up-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                />
+              </svg>
+              <span>RENDIMIENTO Y CHASIS</span>
+            </button>
+
+            <ul class="opciones-filtro">
+              <li class="item-filtro" data-filter-value="todos">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle-on"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8"
+                  />
+                </svg>
+                <span class="texto-opcion">TODOS</span>
+              </li>
+              <li class="item-filtro" data-filter-value="short-ram-intake">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle2-off"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9 11c.628-.836 1-1.874 1-3a4.98 4.98 0 0 0-1-3h4a3 3 0 1 1 0 6z"
+                  />
+                  <path
+                    d="M5 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0 1A5 5 0 1 0 5 3a5 5 0 0 0 0 10"
+                  />
+                </svg>
+                <span class="texto-opcion">SHORT RAM INTAKE</span>
+              </li>
+              <li class="item-filtro" data-filter-value="strut-tower-bar">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle2-off"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9 11c.628-.836 1-1.874 1-3a4.98 4.98 0 0 0-1-3h4a3 3 0 1 1 0 6z"
+                  />
+                  <path
+                    d="M5 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0 1A5 5 0 1 0 5 3a5 5 0 0 0 0 10"
+                  />
+                </svg>
+                <span class="texto-opcion">STRUT TOWER BAR</span>
+              </li>
+              <li class="item-filtro" data-filter-value="lowering-springs">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-toggle2-off"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9 11c.628-.836 1-1.874 1-3a4.98 4.98 0 0 0-1-3h4a3 3 0 1 1 0 6z"
+                  />
+                  <path
+                    d="M5 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0 1A5 5 0 1 0 5 3a5 5 0 0 0 0 10"
+                  />
+                </svg>
+                <span class="texto-opcion">LOWERING SPRINGS</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <!-- ==========================================
+     PANEL CENTRAL - GRID DE PRODUCTOS SHOWROOM
+     ========================================== -->
+      <section class="panel-productos">
+        <!-- Barra superior de ordenamiento / controles -->
+        <div
+          class="top-bar-productos d-flex justify-content-end align-items-center mb-3"
+        >
+          <div class="controles-vista">
+            <button
+              type="button"
+              class="btn-vista active"
+              title="Vista de cuadrícula"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-sort-alpha-down"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.082 5.629 9.664 7H8.598l1.789-5.332h1.234L13.402 7h-1.12l-.419-1.371zm1.57-.785L11 2.687h-.047l-.652 2.157z"
+                />
+                <path
+                  d="M12.96 14H9.028v-.691l2.579-3.72v-.054H9.098v-.867h3.785v.691l-2.567 3.72v.054h2.645zM4.5 2.5a.5.5 0 0 0-1 0v9.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L4.5 12.293z"
+                />
+              </svg>
+            </button>
+            <button type="button" class="btn-vista" title="Vista de lista">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-sort-alpha-up-alt"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12.96 7H9.028v-.691l2.579-3.72v-.054H9.098v-.867h3.785v.691l-2.567 3.72v.054h2.645z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M10.082 12.629 9.664 14H8.598l1.789-5.332h1.234L13.402 14h-1.12l-.419-1.371zm1.57-.785L11 9.688h-.047l-.652 2.156z"
+                />
+                <path
+                  d="M4.5 13.5a.5.5 0 0 1-1 0V3.707L2.354 4.854a.5.5 0 1 1-.708-.708l2-1.999.007-.007a.5.5 0 0 1 .7.006l2 2a.5.5 0 1 1-.707.708L4.5 3.707z"
+                />
+              </svg>
+            </button>
+            <button type="button" class="btn-vista" title="Ordenar por precio">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-sort-down"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.5 2.5a.5.5 0 0 0-1 0v8.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L3.5 11.293zm3.5 1a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M7.5 6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"
+                />
+              </svg>
+            </button>
+            <button type="button" class="btn-vista" title="Ordenar por precio">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-sort-down-alt"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.5 3.5a.5.5 0 0 0-1 0v8.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L3.5 12.293zm4 .5a.5.5 0 0 1 0-1h1a.5.5 0 0 1 0 1zm0 3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zm0 3a.5.5 0 0 1 0-1h5a.5.5 0 0 1 0 1zM7 12.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Contenedor Principal del Grid (3 Columnas) -->
+        <div class="grid-productos">
+          <!-- ------------------------------------------
+         TARJETA DE PRODUCTO 1
+         ------------------------------------------ -->
+          <article
+            class="tarjeta-producto"
+            data-product-id="101"
+            data-precio="2600"
+          >
+            <div class="contenedor-foto">
+              <img
+                src="img/showroom/spoiler-civic.png"
+                alt="Spoiler Delantero Honda Civic"
+                class="img-producto"
+              />
+            </div>
+            <div class="info-producto">
+              <h3 class="nombre-producto">
+                SPOILER DELANTERO HONDA CIVIC - UNIVERSAL
+              </h3>
+              <p class="precio-producto">$ 2,600</p>
+              <div class="acciones-producto">
+                <a href="#articulo-101" class="btn-accion btn-secundario"
+                  >IR AL ARTICULO</a
+                >
+                <button type="button" class="btn-accion btn-comprar">
+                  COMPRAR
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ------------------------------------------
+         TARJETA DE PRODUCTO 2
+         ------------------------------------------ -->
+          <article
+            class="tarjeta-producto"
+            data-product-id="102"
+            data-precio="2600"
+          >
+            <div class="contenedor-foto">
+              <img
+                src="img/showroom/spoiler-civic.png"
+                alt="Spoiler Delantero Honda Civic"
+                class="img-producto"
+              />
+            </div>
+            <div class="info-producto">
+              <h3 class="nombre-producto">
+                SPOILER DELANTERO HONDA CIVIC - UNIVERSAL
+              </h3>
+              <p class="precio-producto">$ 2,600</p>
+              <div class="acciones-producto">
+                <a href="#articulo-102" class="btn-accion btn-secundario"
+                  >IR AL ARTICULO</a
+                >
+                <button type="button" class="btn-accion btn-comprar">
+                  COMPRAR
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ------------------------------------------
+         TARJETA DE BANNER PROMOCIONAL (PUBLICIDAD)
+         ------------------------------------------ -->
+          <article class="tarjeta-promo">
+            <img
+              src="img/gif/ad.gif"
+              alt="Todo para tu Honda Type R"
+              class="img-promo"
+            />
+            <div class="overlay-promo"></div>
+            <span class="etiqueta-publicidad">&larr; GIF O PUBLICIDAD</span>
+          </article>
+
+          <!-- ------------------------------------------
+         TARJETA DE PRODUCTO 3
+         ------------------------------------------ -->
+          <article
+            class="tarjeta-producto"
+            data-product-id="103"
+            data-precio="2600"
+          >
+            <div class="contenedor-foto">
+              <img
+                src="img/showroom/spoiler-civic.png"
+                alt="Spoiler Delantero Honda Civic"
+                class="img-producto"
+              />
+            </div>
+            <div class="info-producto">
+              <h3 class="nombre-producto">
+                SPOILER DELANTERO HONDA CIVIC - UNIVERSAL
+              </h3>
+              <p class="precio-producto">$ 2,600</p>
+              <div class="acciones-producto">
+                <a href="#articulo-103" class="btn-accion btn-secundario"
+                  >IR AL ARTICULO</a
+                >
+                <button type="button" class="btn-accion btn-comprar">
+                  COMPRAR
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ------------------------------------------
+         TARJETA DE PRODUCTO 4 (CON BOTÓN DESTACADO/DORADO)
+         ------------------------------------------ -->
+          <article
+            class="tarjeta-producto"
+            data-product-id="104"
+            data-precio="2600"
+          >
+            <div class="contenedor-foto">
+              <img
+                src="img/showroom/spoiler-civic.png"
+                alt="Spoiler Delantero Honda Civic"
+                class="img-producto"
+              />
+            </div>
+            <div class="info-producto">
+              <h3 class="nombre-producto">
+                SPOILER DELANTERO HONDA CIVIC - UNIVERSAL
+              </h3>
+              <p class="precio-producto">$ 2,600</p>
+              <div class="acciones-producto">
+                <a href="#articulo-104" class="btn-accion btn-secundario"
+                  >IR AL ARTICULO</a
+                >
+                <button type="button" class="btn-accion btn-comprar destacao">
+                  COMPRAR
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ------------------------------------------
+         TARJETA DE PRODUCTO 5
+         ------------------------------------------ -->
+          <article
+            class="tarjeta-producto"
+            data-product-id="105"
+            data-precio="2600"
+          >
+            <div class="contenedor-foto">
+              <img
+                src="img/showroom/spoiler-civic.png"
+                alt="Spoiler Delantero Honda Civic"
+                class="img-producto"
+              />
+            </div>
+            <div class="info-producto">
+              <h3 class="nombre-producto">
+                SPOILER DELANTERO HONDA CIVIC - UNIVERSAL
+              </h3>
+              <p class="precio-producto">$ 2,600</p>
+              <div class="acciones-producto">
+                <a href="#articulo-105" class="btn-accion btn-secundario"
+                  >IR AL ARTICULO</a
+                >
+                <button type="button" class="btn-accion btn-comprar">
+                  COMPRAR
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ------------------------------------------
+         TARJETA DE PRODUCTO 6
+         ------------------------------------------ -->
+          <article
+            class="tarjeta-producto"
+            data-product-id="106"
+            data-precio="2600"
+          >
+            <div class="contenedor-foto">
+              <img
+                src="img/showroom/spoiler-civic.png"
+                alt="Spoiler Delantero Honda Civic"
+                class="img-producto"
+              />
+            </div>
+            <div class="info-producto">
+              <h3 class="nombre-producto">
+                SPOILER DELANTERO HONDA CIVIC - UNIVERSAL
+              </h3>
+              <p class="precio-producto">$ 2,600</p>
+              <div class="acciones-producto">
+                <a href="#articulo-106" class="btn-accion btn-secundario"
+                  >IR AL ARTICULO</a
+                >
+                <button type="button" class="btn-accion btn-comprar">
+                  COMPRAR
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ------------------------------------------
+         TARJETA DE PRODUCTO 7
+         ------------------------------------------ -->
+          <article
+            class="tarjeta-producto"
+            data-product-id="107"
+            data-precio="2600"
+          >
+            <div class="contenedor-foto">
+              <img
+                src="img/showroom/spoiler-civic.png"
+                alt="Spoiler Delantero Honda Civic"
+                class="img-producto"
+              />
+            </div>
+            <div class="info-producto">
+              <h3 class="nombre-producto">
+                SPOILER DELANTERO HONDA CIVIC - UNIVERSAL
+              </h3>
+              <p class="precio-producto">$ 2,600</p>
+              <div class="acciones-producto">
+                <a href="#articulo-107" class="btn-accion btn-secundario"
+                  >IR AL ARTICULO</a
+                >
+                <button type="button" class="btn-accion btn-comprar">
+                  COMPRAR
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ------------------------------------------
+         TARJETA DE PRODUCTO 8
+         ------------------------------------------ -->
+          <article
+            class="tarjeta-producto"
+            data-product-id="108"
+            data-precio="2600"
+          >
+            <div class="contenedor-foto">
+              <img
+                src="img/showroom/spoiler-civic.png"
+                alt="Spoiler Delantero Honda Civic"
+                class="img-producto"
+              />
+            </div>
+            <div class="info-producto">
+              <h3 class="nombre-producto">
+                SPOILER DELANTERO HONDA CIVIC - UNIVERSAL
+              </h3>
+              <p class="precio-producto">$ 2,600</p>
+              <div class="acciones-producto">
+                <a href="#articulo-108" class="btn-accion btn-secundario"
+                  >IR AL ARTICULO</a
+                >
+                <button type="button" class="btn-accion btn-comprar">
+                  COMPRAR
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
