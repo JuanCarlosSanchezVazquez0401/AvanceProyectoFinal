@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header-koyotl position-relative">
+      <!-- ==========================================
+       1. TOP BAR (Barra Negra Superior)
+       ========================================== -->
+      <div class="top-bar bg-black text-white py-3 px-4">
+        <div
+          class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 barra-content"
+        >
+          <!-- Lado Izquierdo: Logo Koyotl + Slogan -->
+          <div
+            class="contenedor-headerL d-flex flex-column align-items-center align-items-md-start"
+          >
+            <img
+              class="koyotlHeader"
+              src="img/home/KoyotlLogo.png"
+              alt="Koyotl Logo"
+            />
+            <p class="slogan mb-0">
+              Personaliza tu estilo, Personaliza tu vida
+            </p>
+          </div>
+
+          <!-- Lado Derecho: Cart & Sign In -->
+          <div class="contenedor-headerR d-flex align-items-center gap-3">
+            <a href="#" class="enlace-top">
+              CART <span class="fa-solid fa-cart-shopping icon"></span>
+            </a>
+            <span class="separadorEnlace">|</span>
+            <a href="#" class="enlace-top">
+              SIGN IN
+              <span class="fa-solid fa-arrow-right-to-bracket icon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+       2. NAV FLOTANTE CON GRADIENTE
+       ========================================== -->
+      <nav class="nav-koyotl w-100">
+        <div class="container-fluid contenedor-nav px-4 px-lg-5">
+          <!-- Enlaces Izquierda -->
+          <div class="navL">
+            <a href="index.html" class="enlaces-nav">HOME</a>
+            <a href="showroom.html" class="enlaces-nav">
+              SHOWROOM <span class="fa-solid fa-angle-down icon-arrow"></span>
+            </a>
+          </div>
+
+          <!-- Logo Central (Corta hacia arriba) -->
+          <div class="contenedor-logo-center">
+            <img
+              class="logo"
+              src="img/home/KoyotlCut.png"
+              alt="Koyotl Emblem"
+            />
+          </div>
+
+          <!-- Enlaces Derecha -->
+          <div class="navR">
+            <a href="contacto.html" class="enlaces-nav">CONTACT</a>
+            <a href="#" class="enlaces-nav">ABOUT</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container-main-contact">
+      <!-- CABECERA DE LA PÁGINA -->
+      <section class="container mt-4 mb-4">
+        <div class="border-bottom pb-3">
+          <h1 class="fw-bold mb-1">Cotiza tu Proyecto Koyotl</h1>
+          <p class="text-muted mb-0">
+            Déjanos los datos de tu vehículo y los componentes que deseas
+            adaptar.
+          </p>
+        </div>
+      </section>
+
+      <!-- FORMULARIO DE CAPTURA (ESTRUCURA GRID + FLEXBOX + BOOTSTRAP FORMS) -->
+      <section class="container mb-5">
+        <div class="row g-4 justify-content-center">
+          <!-- Columna Principal: Formulario -->
+          <div class="col-lg-8">
+            <div class="form-card p-4 p-md-5">
+              <!-- El formulario no requiere JS para renderizarse semánticamente -->
+              <form action="#" method="POST">
+                <!-- Sección 1: Datos Personales (Uso del Grid de Bootstrap dentro de la fila) -->
+                <h5
+                  class="fw-bold mb-3 border-start border-3 ps-2"
+                  style="border-color: var(--koyotl-accent) !important"
+                >
+                  1. Datos del Propietario
+                </h5>
+
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <label for="nombre" class="form-label fw-semibold small"
+                      >Nombre Completo</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      placeholder="Ej. Carlos Mendoza"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label fw-semibold small"
+                      >Correo Electrónico</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="ejemplo@correo.com"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="telefono" class="form-label fw-semibold small"
+                      >Teléfono / WhatsApp</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="telefono"
+                      placeholder="55 1234 5678"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="ubicacion" class="form-label fw-semibold small"
+                      >Estado / Ciudad</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="ubicacion"
+                      placeholder="Ej. Estado de México"
+                    />
+                  </div>
+                </div>
+
+                <!-- Sección 2: Especificaciones del Vehículo -->
+                <h5
+                  class="fw-bold mb-3 border-start border-3 ps-2"
+                  style="border-color: var(--koyotl-accent) !important"
+                >
+                  2. Información del Vehículo
+                </h5>
+
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <label
+                      for="modeloHonda"
+                      class="form-label fw-semibold small"
+                      >Modelo Honda</label
+                    >
+                    <select class="form-select" id="modeloHonda" required>
+                      <option value="" selected disabled>
+                        Selecciona tu modelo...
+                      </option>
+                      <option value="civic">Honda Civic (FK8 / FC / FK)</option>
+                      <option value="fit">Honda Fit (GK5 / GE8)</option>
+                      <option value="accord">Honda Accord (CV1 / CP2)</option>
+                      <option value="otro">Otro modelo Honda</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="anio" class="form-label fw-semibold small"
+                      >Año del Vehículo</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="anio"
+                      min="1990"
+                      max="2026"
+                      placeholder="2020"
+                    />
+                  </div>
+                </div>
+
+                <!-- Sección 3: Opciones / Checkboxes (Captura múltiple) -->
+                <h5
+                  class="fw-bold mb-3 border-start border-3 ps-2"
+                  style="border-color: var(--koyotl-accent) !important"
+                >
+                  3. Componentes de Interés
+                </h5>
+
+                <div class="mb-4">
+                  <label class="form-label fw-semibold small d-block mb-2"
+                    >Selecciona las modificaciones deseables:</label
+                  >
+                  <div class="d-flex flex-wrap gap-3">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="checkFrontal"
+                      />
+                      <label class="form-check-label small" for="checkFrontal"
+                        >Splitter / Lip Frontal</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="checkAleron"
+                      />
+                      <label class="form-check-label small" for="checkAleron"
+                        >Alerón / Spoiler GT</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="checkDifusor"
+                      />
+                      <label class="form-check-label small" for="checkDifusor"
+                        >Difusor Trasero</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="checkCabina"
+                      />
+                      <label class="form-check-label small" for="checkCabina"
+                        >Equipamiento de Cabina</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sección 4: Comentarios / Mensaje -->
+                <div class="mb-4">
+                  <label for="detalles" class="form-label fw-semibold small"
+                    >Detalles del Proyecto / Especificaciones Custom</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="detalles"
+                    rows="4"
+                    placeholder="Describe los acabados requeridos (ej. Fibra de carbono mate, color personalizado, etc.)"
+                  ></textarea>
+                </div>
+
+                <!-- Botones de Acción usando Flexbox -->
+                <div class="d-flex justify-content-end gap-3 pt-3 border-top">
+                  <button type="reset" class="btn btn-outline-secondary px-4">
+                    Limpiar
+                  </button>
+                  <button type="submit" class="btn btn-koyotl px-4">
+                    Enviar Cotización
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Columna Secundaria: Info de Contacto Directo -->
+          <div class="col-lg-4">
+            <div
+              class="p-4 rounded style-info-box"
+              style="background-color: var(--koyotl-dark); color: white"
+            >
+              <h5 class="fw-bold brand-accent mb-3 tittle-aside">
+                Koyotl Workshop
+              </h5>
+              <p
+                class="small text-secondary mb-4"
+                style="color: #b0b0b0 !important"
+              >
+                Especialistas en ingeniería estética y preparación aerodinámica
+                para plataformas Honda JDM.
+              </p>
+
+              <hr class="border-secondary mb-4" />
+
+              <div class="d-flex flex-column gap-3 small">
+                <div>
+                  <span
+                    class="fw-bold d-block text-uppercase text-muted"
+                    style="font-size: 0.75rem"
+                    >Atención en Taller:</span
+                  >
+                  <span>Lunes a Viernes: 9:00 - 18:00 hrs</span>
+                </div>
+                <div>
+                  <span
+                    class="fw-bold d-block text-uppercase text-muted"
+                    style="font-size: 0.75rem"
+                    >Contacto Directo:</span
+                  >
+                  <span>contacto@koyotl.mx</span>
+                </div>
+                <div>
+                  <span
+                    class="fw-bold d-block text-uppercase text-muted"
+                    style="font-size: 0.75rem"
+                    >Especialidad:</span
+                  >
+                  <span>Honda Civic • Fit • Accord</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- FOOTER SIMPLE -->
+    <footer class="text-center py-4 text-muted border-top mt-auto">
+      <div class="container">
+        <small
+          >&copy; 2026 Koyotl Aero & Performance. Todos los derechos
+          reservados.</small
+        >
+      </div>
+    </footer>
+  </body>
+</html>

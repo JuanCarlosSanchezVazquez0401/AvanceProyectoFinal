@@ -79,7 +79,7 @@
 
           <!-- Enlaces Derecha -->
           <div class="navR">
-            <a href="#" class="enlaces-nav">CONTACT</a>
+            <a href="contacto.html" class="enlaces-nav">CONTACTO</a>
             <a href="#" class="enlaces-nav">ABOUT</a>
           </div>
         </div>
@@ -92,11 +92,17 @@
        ========================================== -->
       <div class="contenedor-main">
         <!-- Capa 1 (Fondo): Imagen del auto -->
-        <img
-          class="Banner"
-          src="img/home/hOME_sintexto.png"
-          alt="Honda Civic Gris Koyotl"
-        />
+        <picture class="Banner">
+          <!-- 1. Coloca aquí la ruta de la imagen para MÓVIL y TABLET (< 991px) -->
+          <source media="(max-width: 991px)" srcset="img/home/HOME_tablet" />
+
+          <!-- 2. Coloca aquí la ruta de la imagen para ESCRITORIO / PC -->
+          <img
+            src="img/home/hOME_sintexto.png"
+            alt="Honda Civic Koyotl"
+            class="img-banner"
+          />
+        </picture>
 
         <!-- Capa 2 (Superpuesta): Enlaces de navegación inferior -->
         <div class="contenedor-enlacesBanner">
@@ -216,5 +222,13 @@
         </div>
       </div>
     </section>
+    <footer class="text-center py-4 text-muted border-top mt-auto">
+      <div class="container">
+        <small
+          >&copy; 2026 Koyotl Aero & Performance. Todos los derechos
+          reservados.</small
+        >
+      </div>
+    </footer>
   </body>
 </html>

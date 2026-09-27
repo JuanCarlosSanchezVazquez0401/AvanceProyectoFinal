@@ -129,6 +129,10 @@ aside.sidebar-filtros {
             transform 0.2s ease;
         }
 
+        .bi-toggle-on {
+          color: var(--koyotl-toggle-active);
+        }
+
         .texto-opcion {
           letter-spacing: 0.5px;
         }

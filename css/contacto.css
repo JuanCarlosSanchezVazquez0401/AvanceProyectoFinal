@@ -1,0 +1,43 @@
+/* ==========================================
+   FORMULARIO DE CAPTURA (ESTILOS CUSTOM)
+   ========================================== */
+
+/* Tarjeta contenedora del Formulario */
+
+body {
+  background-color: var(--koyotl-light);
+}
+.container-main-contact {
+  margin-top: 8rem;
+  .tittle-aside {
+    color: var(--koyotl-accent);
+  }
+}
+
+.form-card {
+  background-color: var(--koyotl-card-bg);
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  .btn {
+    padding: 0.5rem 0.5rem;
+  }
+  .btn-koyotl {
+    background-color: var(--koyotl-accent);
+    color: white;
+    font-weight: bold;
+  }
+}
+
+/* Enfoque de campos en color de marca Koyotl */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--koyotl-accent);
+  box-shadow: 0 0 0 0.25rem rgba(208, 0, 0, 0.15);
+}
+
+.form-check-input:checked {
+  background-color: var(--koyotl-accent);
+  border-color: var(--koyotl-accent);
+}

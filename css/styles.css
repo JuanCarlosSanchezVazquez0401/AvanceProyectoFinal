@@ -3,6 +3,12 @@
   --color-textoOscuro: #000000;
   --color-destacado: #876700;
   --color-destacado-claro: #ffd757;
+  --koyotl-dark: #121212; /* Negro asfalto */
+  --koyotl-light: #f8f9fa; /* Gris minimalista claro */
+  --koyotl-accent: #d00000; /* Rojo Honda deportivo */
+  --koyotl-gray: #6c757d; /* Gris texto y detalles */
+  --koyotl-card-bg: #ffffff; /* Blanco puro para tarjetas */
+  --koyotl-toggle-active: #6ab5f7;
 }
 
 body {
@@ -167,8 +173,12 @@ main {
     .Banner {
       width: 100%;
       height: 100vh;
-      object-fit: cover; /* Mantiene la proporción de la imagen sin deformar */
-      object-position: center; /* Centra el encuadre del vehículo */
+      .img-banner {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ajusta la imagen sin estirarla */
+        object-position: center; /* Mantiene el auto centrado */
+      }
     }
 
     /* ------------------------------------------
@@ -431,6 +441,176 @@ section.contenedor-seccion {
       .contenedor-imagen .img-tarjeta {
         transform: scale(1.08); /* Aplica el efecto de acercamiento a la foto */
       }
+    }
+  }
+}
+
+footer {
+  background-color: var(--koyotl-dark);
+  .container small {
+    color: var(--koyotl-light);
+  }
+}
+
+/* ==========================================
+   2. MEDIA QUERY: LAPTOPS / TABLETS MEDIANAS
+   (Ancho menor a 1200px)
+   ========================================== */
+@media (max-width: 1200px) {
+  header.header-koyotl {
+    .top-bar .barra-content {
+      padding: 0rem 3rem; /* Reducimos el margen lateral */
+    }
+
+    nav.nav-koyotl .contenedor-nav {
+      .navL,
+      .navR {
+        gap: 1.5rem; /* Menos espacio entre enlaces */
+      }
+
+      .contenedor-logo-center .logo {
+        width: 75px; /* Logo central un poco más chico */
+      }
+    }
+  }
+}
+
+/* ==========================================
+   3. MEDIA QUERY: TABLETS Y PANTALLAS PEQUEÑAS
+   (Ancho menor a 991px)
+   ========================================== */
+@media (max-width: 991px) {
+  header.header-koyotl {
+    .top-bar .barra-content {
+      padding: 0rem 1.5rem;
+    }
+
+    nav.nav-koyotl {
+      position: static; /* Ya no flota sobre la imagen principal */
+      background: #000000;
+      border-bottom: 2px solid var(--color-destacado);
+
+      .contenedor-nav {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 1.25rem 0;
+        gap: 1rem; /* Espaciado uniforme para todo el menú */
+
+        /* OCULTAMOS EL LOGO CENTRAL */
+        .contenedor-logo-center {
+          display: none !important;
+        }
+
+        .navL,
+        .navR {
+          flex-direction: column;
+          width: 100%;
+          gap: 1rem; /* Espacio igual entre cada opción */
+          padding: 0;
+          justify-content: center;
+          margin: 0;
+        }
+
+        .enlaces-nav {
+          font-size: 1rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  main {
+    .contenedor-main {
+      .Banner {
+        height: 100vh; /* Ajuste de altura opcional para móvil */
+        /* Ruta de la nueva imagen para Móvil */
+        background-image: url('../img/home/hOME_sintexto.png');
+      }
+    }
+
+    .contenedor-enlacesBanner {
+      display: none !important;
+    }
+  }
+}
+
+/* ==========================================
+   4. MEDIA QUERY: CELULARES
+   (Ancho menor a 768px)
+   ========================================== */
+@media (max-width: 768px) {
+  header.header-koyotl {
+    .top-bar {
+      .barra-content {
+        padding: 0rem 1rem;
+      }
+
+      .koyotlHeader {
+        width: 160px; /* Reducimos el logo principal */
+      }
+
+      .slogan {
+        font-size: 0.65rem; /* Texto secundario más pequeño */
+      }
+
+      .texto-top {
+        display: none; /* En celulares ocultamos la palabra CART/SIGN IN y dejamos solo los iconos */
+      }
+    }
+  }
+
+  main {
+    .contenedor-main {
+      .Banner {
+        height: 100vh; /* Ajuste de altura opcional para móvil */
+        /* Ruta de la nueva imagen para Móvil */
+        background-image: url('../img/home/HOME_movil.jpg');
+      }
+    }
+
+    .contenedor-enlacesBanner {
+      display: none !important;
+    }
+  }
+}
+
+/* ==========================================
+   4. MEDIA QUERY: CELULARES
+   (Ancho menor a 415px)
+   ========================================== */
+@media (max-width: 768px) {
+  header.header-koyotl {
+    .top-bar {
+      .barra-content {
+        padding: 0rem 1rem;
+      }
+
+      .koyotlHeader {
+        width: 160px; /* Reducimos el logo principal */
+      }
+
+      .slogan {
+        font-size: 0.65rem; /* Texto secundario más pequeño */
+      }
+
+      .texto-top {
+        display: none; /* En celulares ocultamos la palabra CART/SIGN IN y dejamos solo los iconos */
+      }
+    }
+  }
+
+  main {
+    .contenedor-main {
+      .Banner {
+        height: 100vh; /* Ajuste de altura opcional para móvil */
+        /* Ruta de la nueva imagen para Móvil */
+        background-image: url('../img/home/HOME_movil_400.jpg');
+      }
+    }
+
+    .contenedor-enlacesBanner {
+      display: none !important;
     }
   }
 }
